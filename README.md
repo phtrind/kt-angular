@@ -1,1 +1,1 @@
-# kt-angular
+# KT Angular - Triforce
