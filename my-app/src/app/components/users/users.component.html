@@ -1,0 +1,15 @@
+<div class="user-button col-12">
+  <button id="btn-buscar" mat-button (click)="getUsers()">Testar chamada Http</button>
+</div>
+
+<div class="users row">
+  <div class="col-3" *ngFor="let user of users">
+    <mat-card class="example-header-image">
+      <mat-card-header>
+        <mat-card-title>{{ user.name }}</mat-card-title>
+        <mat-card-subtitle>{{ user.email }}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="{{ user.avatar }}" />
+    </mat-card>
+  </div>
+</div>

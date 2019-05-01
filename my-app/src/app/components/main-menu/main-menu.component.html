@@ -1,0 +1,11 @@
+<div class="main-menu col-12">
+  <div class="row">
+    <app-card-menu
+      *ngFor="let opcao of opcoes"
+      class="col-3"
+      title="{{ opcao.title }}"
+      description="{{ opcao.description }}"
+      route="{{ opcao.route }}"
+    ></app-card-menu>
+  </div>
+</div>

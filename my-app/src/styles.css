@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+body {
+  height: calc(100vh - 64px);
+  margin: 0px;
+}
+
+.content {
+  margin-top: 50px;
+  max-height: 100%;
+}
+
+.content .content-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.content .content-body {
+  height: 100%;
+}
+
+.link {
+  cursor: pointer;
+}
+
+.icon-list {
+    margin-right: 10px;
+}
+
+/* ajustes material-design */
+.mat-card-header-text {
+  margin: 0px !important;
+}
+
+.mat-list-item-content {
+  font-size: 16px !important;
+}
+
+.mat-tab-label-content {
+  font-size: 20px !important;
+}
