@@ -1,3 +1,4 @@
+import { ProgressBarService } from './../../services/progress-bar.service';
 import { Component, OnInit } from '@angular/core';
 
 import { Menu } from 'src/app/models/menu';
@@ -9,17 +10,23 @@ import { Menu } from 'src/app/models/menu';
 })
 export class MainMenuComponent implements OnInit {
   opcoes: Menu[];
+  progressStatus: number;
 
-  constructor() {
+  constructor(private progressBarService: ProgressBarService) {
     this.opcoes = [
-      { title: 'Intrudução', description: 'Intodução ao Angular', route: 'intro'},
-      { title: 'Conceitos', description: 'Principais conceitos', route: 'concepts'},
-      { title: 'Benefícios', description: 'Principais pontos positivos', route: 'pros'},
-      { title: 'Extras', description: 'Extensões e bibliotecas', route: 'util'}
+      { title: 'Intrudução', description: 'Intodução ao Angular', route: 'intro' },
+      { title: 'Conceitos', description: 'Principais conceitos', route: 'concepts' },
+      { title: 'Benefícios', description: 'Principais pontos positivos', route: 'pros' },
+      { title: 'Extras', description: 'Extensões e bibliotecas', route: 'util' }
     ];
+
+    this.progressStatus = 0;
   }
 
   ngOnInit() {
+    this.progressBarService.status$.subscribe(x => {
+      this.progressStatus = x;
+    });
   }
 
 }

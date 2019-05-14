@@ -1,11 +1,14 @@
 <div class="main-menu col-12">
+  <div class="row p-bar">
+    <div class="col-md-12">
+      <mat-progress-bar mode="determinate" value="{{ progressStatus }}"></mat-progress-bar>
+    </div>
+  </div>
   <div class="row">
     <app-card-menu
       *ngFor="let opcao of opcoes"
       class="col-3"
-      title="{{ opcao.title }}"
-      description="{{ opcao.description }}"
-      route="{{ opcao.route }}"
+      [item]="opcao"
     ></app-card-menu>
   </div>
 </div>

@@ -1,4 +1,4 @@
-<div class="content col-6 offset-3">
+<div class="content col-8 offset-2">
   <div class="content-header">
     <h2>Conceitos</h2>
   </div>
@@ -12,14 +12,16 @@
           >
           <mat-list-item role="listitem">
             <mat-icon matListIcon class="icon-list">code</mat-icon>
-            No Angular é possível dividir a sua aplicação em
-            módulos. Esses módulos podem ser contextos, fluxos, ou um grupo de
-            componentes que possuem muita coisa em comum</mat-list-item
+            AppModule é o root module</mat-list-item
           >
           <mat-list-item role="listitem">
             <mat-icon matListIcon class="icon-list">code</mat-icon>
-            Por padrão, uma aplicação tem pelo menos um módulo, que é o
-            AppModule</mat-list-item
+            É sugerido que a aplicação seja modularizada</mat-list-item
+          >
+          <mat-list-item role="listitem">
+            <mat-icon matListIcon class="icon-list">code</mat-icon>
+            Módulos podem ser contextos, fluxos, ou um grupo de
+            componentes que possuem muita coisa em comum</mat-list-item
           >
           <mat-list-item role="listitem">
             <mat-icon matListIcon class="icon-list">code</mat-icon>
@@ -27,14 +29,7 @@
           >
           <mat-list-item role="listitem">
             <mat-icon matListIcon class="icon-list">code</mat-icon>
-            O framework oferece uma implementação de lazy-loading, onde você
-            define quais módulos serão carregados no start da aplicação e quais
-            devem ser carregados "on demand", melhorando bastante a performance</mat-list-item
-          >
-          <mat-list-item role="listitem">
-            <mat-icon matListIcon class="icon-list">code</mat-icon>
-            É altamente recomendável que uma aplicação complexa seja dividida em
-            módulos</mat-list-item
+            Lazy-loading</mat-list-item
           >
         </mat-list>
       </mat-tab>
@@ -46,13 +41,7 @@
           >
           <mat-list-item role="listitem">
             <mat-icon matListIcon class="icon-list">code</mat-icon>
-            Assim como os módulos, cada aplicação Angular tem pelo menos um
-            componente, que é o AppComponent</mat-list-item
-          >
-          <mat-list-item role="listitem">
-            <mat-icon matListIcon class="icon-list">code</mat-icon>
-            O AppComponent é o "root component" da aplicação, ou seja, está no
-            topo da hierarquia dos componentes</mat-list-item
+            O AppComponent é o root component</mat-list-item
           >
           <mat-list-item role="listitem">
             <mat-icon matListIcon class="icon-list">code</mat-icon>
@@ -60,7 +49,7 @@
           >
           <mat-list-item role="listitem">
             <mat-icon matListIcon class="icon-list">code</mat-icon>
-            Style (CSS, SCSS, Sass, Less, Stylus)</mat-list-item
+            Style (CSS, SCSS, Sass, Less)</mat-list-item
           >
           <mat-list-item role="listitem">
             <mat-icon matListIcon class="icon-list">code</mat-icon>
@@ -68,7 +57,7 @@
           >
           <mat-list-item role="listitem">
             <mat-icon matListIcon class="icon-list">code</mat-icon>
-            Suporte à two-way-data biding</mat-list-item
+            Two-way-data biding</mat-list-item
           >
         </mat-list>
       </mat-tab>
@@ -80,20 +69,20 @@
           >
           <mat-list-item role="listitem">
             <mat-icon matListIcon class="icon-list">code</mat-icon>
-            Uma classe que pode ser compartilhada entre
-            componentes</mat-list-item
-          >
-          <mat-list-item role="listitem">
-            <mat-icon matListIcon class="icon-list">code</mat-icon>
-            A dependência dos Components para os Services é implementada através
+            Os components utilizam os Services através
             de Injeção de Dependência</mat-list-item
           >
           <mat-list-item role="listitem">
             <mat-icon matListIcon class="icon-list">code</mat-icon>
-            É altamente recomendável que toda a lógica de négocio, chamada à
-            APIs, etc fiquem nos Services, uma vez que o seu Component ficaria
-            responsável apenas pela interface, possibilitando facilmente a sua
-            substituição</mat-list-item
+            Lógica de negócio</mat-list-item
+          >
+          <mat-list-item role="listitem">
+            <mat-icon matListIcon class="icon-list">code</mat-icon>
+            Requisições http</mat-list-item
+          >
+          <mat-list-item role="listitem">
+            <mat-icon matListIcon class="icon-list">code</mat-icon>
+            Scopos de Injeção de Depedência</mat-list-item
           >
         </mat-list>
         <app-users></app-users>
@@ -102,35 +91,19 @@
         <mat-list role="list">
           <mat-list-item role="listitem">
             <mat-icon matListIcon class="icon-list">code</mat-icon>
-            O framework oferece um módulo Router que é responsável pelo
-            gerenciamento das rotas</mat-list-item
+            Gerenciamento das rotas e exibição dos componentes</mat-list-item
           >
           <mat-list-item role="listitem">
             <mat-icon matListIcon class="icon-list">code</mat-icon>
-            Permite você definir rotas para a navegação entre
-            componentes</mat-list-item
+            Carregamento de módulos lazy-loading</mat-list-item
           >
           <mat-list-item role="listitem">
             <mat-icon matListIcon class="icon-list">code</mat-icon>
-            O Router intercepta as solicitações de URLs e gerencia a exibição
-            dos componentes</mat-list-item
+            Logs de navegação entre rotas</mat-list-item
           >
           <mat-list-item role="listitem">
             <mat-icon matListIcon class="icon-list">code</mat-icon>
-            Se uma determinada rota precisa de um módulo que ainda não foi
-            carregado, o Router pede o carregamento desse módulo através do
-            lazy-loading</mat-list-item
-          >
-          <mat-list-item role="listitem">
-            <mat-icon matListIcon class="icon-list">code</mat-icon>
-            O Router também grava os logs de navegação no browser, portanto os
-            botões de "Voltar" e "Avançar" continua funcionando normalmente,
-            mesmo sem o recarregamento da página</mat-list-item
-          >
-          <mat-list-item role="listitem">
-            <mat-icon matListIcon class="icon-list">code</mat-icon>
-            É possível definir regras de navegação para cada rota, dando a
-            possibilidade para proteção de rotas por exemplo</mat-list-item
+            Proteção de rotas</mat-list-item
           >
         </mat-list>
       </mat-tab>
